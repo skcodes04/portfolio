@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Website</title>
+  <!-- css style sheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- AOS CDN -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+</head>
+
+<body>
+<nav>
+  <strong>MyPortfolio</strong>
+
+  <!-- Hamburger button -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <ul id="nav-menu">
+    <li><a href="#home" onclick="closeMenu()">Home</a></li>
+    <li><a href="#features" onclick="closeMenu()">Features</a></li>
+    <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+    <li><a href="#services" onclick="closeMenu()">Services</a></li>
+    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+    <li><span class="toggle" onclick="toggleTheme()">🌙</span></li>
+  </ul>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div data-aos="fade-up">
+    <div class="developer-icon">👨🏻‍💻</div>
+    <h1>Frontend Developer</h1>
+    <p>Building modern, responsive & premium websites</p>
+    <a href="#projects" class="btn">View Work</a>
+  </div>
+</section>
+
+
+<!-- FEATURED -->
+<section id="features">
+  <h2>Features</h2>
+  <div class="grid">
+    <div class="card">⚡ Fast Performance</div>
+    <div class="card">🌙 Dark Mode</div>
+    <div class="card">📱 Fully Responsive</div>
+    <div class="card">✨ AOS Animations</div>
+  </div>
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2 data-aos="fade-right">Projects</h2>
+
+  <div class="grid">
+    <div class="card" data-aos="zoom-in">
+        <img src="Images/dashboardDesign.avif" alt="dashboard-ui">
+      <h3>Dashboard UI</h3>
+      <p>Modern admin panel interface</p>
+      <button type="button">View Project</button>
+    </div>
+
+    <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="Images/ecommerceUi.avif" alt="ecommerce-store">
+        <h3>Ecommerce Store</h3>
+      <p>Responsive shop layout</p>
+      <button type="button">View Project</button>
+        
+    </div>
+
+    <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="Images/LoginAuthentication.avif" alt="login-authentication">
+        <h3>Authentication System</h3>
+      <p>Login & signup pages</p>
+      <button type="button">View Project</button>
+    </div>
+
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="Images/sidebar.avif" alt="sidebar-with-tooltip">
+      <h3>Responsive Sidebar</h3>
+      <p>Responsive collapsible sidebar with tooltip</p>
+      <button type="button">View Project</button>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2 data-aos="fade-right">Services</h2>
+
+  <div class="grid">
+    <div class="card" data-aos="fade-up">
+      <div class="service-icon">💻</div>
+      <h3>Web Development</h3>
+      <p>Responsive websites using modern technologies.</p>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <div class="service-icon">🎨</div>
+      <h3>UI/UX Design</h3>
+      <p>Clean and user-friendly interface design.</p>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <div class="service-icon">⚡</div>
+      <h3>Performance Optimization</h3>
+      <p>Fast loading and SEO-optimized builds.</p>
+    </div>
+
+     <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <div class="service-icon">🔀</div>
+      <h3>Git GitHub</h3>
+      <p>GitHub is a web-based platform for version control and collaborative software development.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 data-aos="fade-right">Contact Me</h2>
+
+  <form data-aos="fade-up">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Email" required />
+    <textarea rows="4" placeholder="Message"></textarea>
+    <button>Send Message</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-details">
+      <h3>MyPortfolio</h3>
+      <p>Modern personal website template for developers & designers.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div>
+      <h4>Social</h4>
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter</a>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © 2026 MyPortfolio | All rights reserved
+  </div>
+</footer>   
+
+<!-- AOS CDN -->
+ <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+<script>
+  AOS.init({ once: true });
+
+  function toggleTheme() {
+    document.body.classList.toggle("dark");
+  }
+
+const navMenu = document.querySelector('#nav-menu');
+
+function toggleMenu() {
+  navMenu.classList.toggle('show');
+}
+
+function closeMenu() {
+  navMenu.classList.remove('show');
+}
+
+
+
+</script>
+
+</body>
+</html>
