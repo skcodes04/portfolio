@@ -34,4 +34,4 @@ Frameworks/Libraries: Tailwind CSS, Bootstrap, or others you used
 
 🔗 Live Portfolio
 
-Live preview here:[ ]
+Live preview here:[https://skcodes04.github.io/portfolio/]
